@@ -7,8 +7,8 @@
 # import libraries
 import os
 # importing files
-from app.bot import Application
+from app.bot import start_application
 
 if __name__ == "__main__":
     os.system("clear")
-    Application("yinlin-token")
+    start_application("yinlin-token")

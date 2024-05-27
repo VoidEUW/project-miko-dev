@@ -1,0 +1,34 @@
+{
+    "versions": {
+        "v0.2": {
+            "version-date": "2023-12-13",
+            "en": {
+                "changes": [
+                    "[CHANGE]",
+                    "[CHANGE]"
+                ]
+            }
+        },
+        "v0.3": {
+            "version-date": "2024-05-21",
+            "en": {
+                "changes": [
+                    "ADDED Beep command",
+                    "ADDED Version command",
+                    "ADDED Person interactions",
+                    "ADDED Meme API for memes",
+                    "ADDED Welcome messages",
+                    "MODIFIED More answers for Miko!",
+                    "MODIFIED Moderation with funny reaction",
+                    "[ADD MORE!]"
+                ]
+            },
+            "de": {
+                "changes": [
+                    "[VERÄNDERUNG]",
+                    "[VERÄNDERUNG]"
+                ]
+            }
+        }
+    }
+}
