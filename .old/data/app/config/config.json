@@ -1,0 +1,15 @@
+{
+    "bot-tag": "MIKO",
+    "version": "v0.3",
+
+    "lang": "en",
+
+    "paths": {
+        "log-path": "logs/",
+        "server-ids-path": "data/app/server/",
+        
+        "moderation-path": "data/app/moderation/",
+        "interactions-path": "data/app/interactions/",
+        "gifs-path": "data/images/"
+    }
+}

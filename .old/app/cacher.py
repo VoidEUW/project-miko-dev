@@ -3,7 +3,6 @@
 - created by Void EUW
 - date: 2024-05-22
 """
-
 # importing libraries
 import json
 # importing other files
@@ -20,11 +19,17 @@ class Cacher:
             - `clear_cache` -> None
     """
 
-    def __init__(self) -> None:
+    def __init__(self, token_keyword: str) -> None:
         """
         ## __init__
             - loading cache
+            - setting self.token
+        ### Params:
+            - `token_keyword` (str) is the used token to start the bot
         """
+
+        self.token_keyword: str = token_keyword
+        self.token: str = None
         self.cache: dict = {}
         self.load_cache()
     
@@ -52,7 +57,7 @@ class Cacher:
                 value = data[key]
                 if isinstance(value, list):
                     for filename in value:
-                        with open(prefix + path + filename, "r", encoding="utf-8") as f:
+                        with open(prefix + path + filename, "r") as f:
                             content = json.load(f)
                         keys: list = path.split("/")
                         keys.pop()
@@ -71,6 +76,7 @@ class Cacher:
         parse_cache("", cache_files)
 
         # print(self.cache)
+        self.token: str = self.cache["config"][".token"]["token"][self.token_keyword]
     
     def update_cache(self) -> None:
         """
@@ -95,9 +101,3 @@ class Cacher:
         """
         # [ ] clear_cache
         pass
-    
-    def get_token(self, token_keyword: str):
-        return self.cache["config"][".token"]["token"][token_keyword]
-
-global cacher_
-cacher_: Cacher = Cacher()

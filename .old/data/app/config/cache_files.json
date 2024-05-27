@@ -18,7 +18,8 @@
         ],
         "bot_person": [
             "bot_void.json",
-            "bot_mrgeneral.json"
+            "bot_mrgeneral.json",
+            "bot_melina.json"
         ]
     },
     "moderation": [
